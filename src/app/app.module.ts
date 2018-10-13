@@ -11,8 +11,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MapPage } from '../pages/home/map-page';
-import { BarProvider } from '../providers/bar/bar';
 import { HttpClientModule } from '@angular/common/http';
+import { LocationService } from '../providers/location/location';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     SplashScreen,
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BarProvider
+    LocationService
   ]
 })
 export class AppModule {}
