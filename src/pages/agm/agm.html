@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>AGM TEST</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <agm-map [latitude]="myPosition.lat" [longitude]="myPosition.lng" [zoom]="myPosition.zoom"> 
+        <agm-marker [latitude]="myPosition.lat" [longitude]="myPosition.lng"></agm-marker>
+        <agm-marker *ngFor="let location of locations" [latitude]="location.lat" [longitude]="location.long">
+            <agm-snazzy-info-window 
+              [latitude]="location.lat" [longitude]="location.long" [closeWhenOthersOpen]="true">
+                <ng-template>
+                  <h3>{{location.name}}</h3>
+                </ng-template>
+              </agm-snazzy-info-window> 
+        </agm-marker>
+      </agm-map>
+</ion-content>

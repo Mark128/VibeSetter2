@@ -24,7 +24,11 @@ export class MapPage {
     
   showMap = false;
 
-  constructor(public navCtrl: NavController, public geolocation: Geolocation, public locationService: LocationService, public platform : Platform) {
+  constructor(
+    public navCtrl: NavController, 
+    public geolocation: Geolocation, 
+    public locationService: LocationService, 
+    public platform : Platform) {
 
   }
 
