@@ -10,8 +10,21 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let location of locations" (click)="goToDetailPage(location)">
-      {{location.name}}
-    </button>
+    <ion-item *ngFor="let location of locations" (click)="goToDetailPage(location)">
+      <ion-label>
+       <div>{{location.name}}</div>
+       <div>
+          <img id="locationImage" src="https://via.placeholder.com/100"/> 
+          <img id="icon" src="https://via.placeholder.com/60"/> 
+      </div>
+      <div> 
+         <span>{{location.description}}</span><br>
+         <span>123 fake street, Toronto, ON, M5E1X6</span>
+      </div>  
+
+       
+      </ion-label>
+    
+    </ion-item>
   </ion-list>
 </ion-content>

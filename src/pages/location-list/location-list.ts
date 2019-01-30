@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { LocationService } from '../../providers/location/location';
 import { LocationDetailPage } from '../location-detail/location-detail';
 
@@ -15,11 +15,16 @@ export class LocationListPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private locationService: LocationService) {
+    private locationService: LocationService,
+    private loadingController: LoadingController) {
   }
 
   ionViewDidLoad() {
-     //When the app loads, get all the locations from the location service and then load the map
+     let loader = this.loadingController.create({
+       content: 'Getting Bars',
+       dismissOnPageChange: true
+     });
+     loader.present();
      this.locationService.getLocations().subscribe((response) => {
       this.locations = response;
    }); 

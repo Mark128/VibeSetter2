@@ -1,42 +1,49 @@
 [
   {
     "name": "Mark's Place",
+    "description" : "A sample description of a bar",
     "lat": 43.648410, 
     "long": -79.376470,
     "status": "busy"
   },
   {
     "name": "Corner Place",
+    "description" : "A sample description of a bar",
     "lat": 43.649780, 
     "long": -79.371340,
     "status": "packed"
   },
   {
     "name": "Hot House",
+    "description" : "A sample description of a bar",
     "lat": 43.649290, 
     "long": -79.373820,
     "status": "dead"
   },
   {
     "name": "C'est What",
+    "description" : "A sample description of a bar",
     "lat": 43.648410, 
     "long": -79.373390,
     "status": "busy"
   },
   {
     "name": "Earl's",
+    "description" : "A sample description of a bar",
     "lat": 43.648410, 
     "long": -79.373390,
     "status": "busy"
   },
   {
     "name": "Early Mercy",
+    "description" : "A sample description of a bar",
     "lat": 43.645160, 
     "long": -79.398060,
     "status": "packed"
   },
   {
     "name": "Crocodile Rock",
+    "description" : "A sample description of a bar",
     "lat": 43.648450, 
     "long": -79.388550,
     "status": "dead"
