@@ -3,7 +3,6 @@ import { NavController, NavParams, Platform } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { LocationService } from '../../providers/location/location';
 
-
 @Component({
   selector: 'page-agm',
   templateUrl: 'agm.html',
@@ -11,8 +10,9 @@ import { LocationService } from '../../providers/location/location';
 export class AgmPage {
 
   public myPosition: any = {};
-  public locations:  any = [];
-
+  public locations:  any = []; 
+  public mapZoom = 14; 
+ 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
@@ -22,11 +22,10 @@ export class AgmPage {
   }
 
   ionViewDidLoad() {  
-
     //When the app loads, get all the locations from the location service and then load the map
     this.locationService.getLocations().subscribe((response) => {
-      this.locations = response;
-    });   
+       this.locations = response;
+    }); 
 
     this.getMyPosition();
     this.getLocations();
@@ -38,14 +37,16 @@ export class AgmPage {
       this.myPosition ={
         lat: position.coords.latitude,
         lng: position.coords.longitude,
-        zoom: 18,
-        markerLabel: "My Position"
       }
     });
   }
 
   getLocations() {
+  
+  }
 
+  markerClicked($event, location){
+    console.log(location.name);
   }
 
 }

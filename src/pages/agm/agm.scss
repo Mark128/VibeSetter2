@@ -4,4 +4,15 @@ page-agm {
         width: 100%;
     }
 
+    #locationImage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    #markerTitle{
+        max-width: 100;
+    }
+
 }
