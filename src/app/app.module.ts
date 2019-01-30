@@ -15,13 +15,19 @@ import { MapPage } from '../pages/Map/map-page';
 import { HttpClientModule } from '@angular/common/http';
 import { LocationService } from '../providers/location/location';
 import { AgmPage } from '../pages/agm/agm';
+import { LocationListPage } from '../pages/location-list/location-list';
+import { LocationDetailPage } from '../pages/location-detail/location-detail';
+import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
     MyApp,
     MapPage,
     TabsPage,
-    AgmPage
+    AgmPage,
+    LocationListPage,
+    LocationDetailPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,10 @@ import { AgmPage } from '../pages/agm/agm';
     MyApp,
     MapPage,
     TabsPage,
-    AgmPage
+    AgmPage,
+    LocationListPage,
+    LocationDetailPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the LocationDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-location-detail',
@@ -14,11 +8,13 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class LocationDetailPage {
 
+  public location: any = {};
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LocationDetailPage');
+    this.location = this.navParams.data;
   }
 
 }
