@@ -9,5 +9,23 @@
 
 
 <ion-content>
-
+    <ion-card>
+        <ion-card-header>         
+          <ion-card-title>{{location?.name}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+         {{location?.description}}
+        </ion-card-content>
+        <ion-card-content>
+            {{location?.street}} <br>  
+            {{location?.city}}, {{location?.province}} <br>
+            {{location?.postal}}         
+           </ion-card-content>
+        <ion-card-content>
+            {{location?.status}}
+        </ion-card-content>
+      </ion-card>
+      
+  
 </ion-content>

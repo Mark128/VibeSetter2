@@ -15,6 +15,11 @@ export class LocationDetailPage {
 
   ionViewDidLoad() {
     this.location = this.navParams.data;
+    console.log(this.location)
+  }
+
+  toggleFavourite(){
+    
   }
 
 }

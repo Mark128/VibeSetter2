@@ -1,51 +1,120 @@
 [
   {
     "name": "Mark's Place",
-    "description" : "A sample description of a bar",
+    "description" : "Where Mark lives in a 1+den condo",
     "lat": 43.648410, 
-    "long": -79.376470,
-    "status": "busy"
+    "long": -79.376470,  
+    "street": "88 Scott St",
+    "city" : "Toronto",
+    "postal": "M5E 1X6",
+    "country": "Canada",
+    "status": "busy",
+    "images" : [
+      {"url": "https://via.placeholder.com/120"},
+      {"url": "https://via.placeholder.com/120"},
+      {"url": "https://via.placeholder.com/120"}
+    ]
   },
   {
     "name": "Corner Place",
-    "description" : "A sample description of a bar",
+    "description" : "Small plates & international cuisine are the focus at this laid-back bar & restaurant.",
     "lat": 43.649780, 
-    "long": -79.371340,
-    "status": "packed"
+    "long": -79.371340,    
+    "street": "11 Jarvis",
+    "city" : "Toronto",
+    "provice" : "ON",
+    "postal": "M5E 1N3",
+    "country": "Canada",    
+    "status": "packed",
+    "images" : [
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120"
+    ]
   },
   {
     "name": "Hot House",
-    "description" : "A sample description of a bar",
+    "description" : "A restaurant with hot food",
     "lat": 43.649290, 
     "long": -79.373820,
-    "status": "dead"
+    "street": "35 Church",
+    "city" : "Toronto",
+    "provice" : "ON",
+    "postal": "M5E 1T3",
+    "country": "Canada",
+    "status": "dead",
+    "images" : [
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120"
+    ]
   },
   {
     "name": "C'est What",
-    "description" : "A sample description of a bar",
+    "description" : "Subterranean taproom offering comfort food plus dozens of craft beers, a whisky bar & board games.",
     "lat": 43.648410, 
     "long": -79.373390,
-    "status": "busy"
+    "street": "67 Front St E",
+    "city" : "Toronto",
+    "provice" : "ON",
+    "postal": "M5E 1B5",
+    "country": "Canada",
+    "status": "busy",
+    "images" : [
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120"
+    ]
   },
   {
     "name": "Earl's",
-    "description" : "A sample description of a bar",
+    "description" : "Sleek, upscale chain serving gourmet burgers, global comfort food, cocktails, wines & beers.",
     "lat": 43.648410, 
     "long": -79.373390,
-    "status": "busy"
+    "street": "150 King St W # 100",
+    "city" : "Toronto",
+    "provice" : "ON",
+    "postal": "M5H 3T9",
+    "country": "Canada",
+    "status": "busy",
+    "images" : [
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120"
+    ]
   },
   {
     "name": "Early Mercy",
-    "description" : "A sample description of a bar",
+    "description" : "Trendy cocktail bar with changing food & offbeat decor (e.g. a word wall & political portraits).",
     "lat": 43.645160, 
     "long": -79.398060,
-    "status": "packed"
+    "street": "540 King St W",
+    "city" : "Toronto",
+    "provice" : "ON",
+    "postal": "M5V 1M3",
+    "country": "Canada",
+    "status": "packed",
+    "images" : [
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120"
+    ]
   },
   {
     "name": "Crocodile Rock",
-    "description" : "A sample description of a bar",
+    "description" : "Popular after-work spot for drinks, burgers & appetizers, with retro tunes & a large rooftop patio.",
     "lat": 43.648450, 
     "long": -79.388550,
-    "status": "dead"
+    "street": "240 Adelaide St W",
+    "city" : "Toronto",
+    "provice" : "ON",
+    "postal": "M5H 1W7",
+    "country": "Canada",
+    "status": "dead",
+    "images" : [
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120",
+      "https://via.placeholder.com/120"
+    ]
   }
 ]
