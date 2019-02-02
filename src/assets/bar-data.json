@@ -10,9 +10,9 @@
     "country": "Canada",
     "status": "busy",
     "images" : [
-      {"url": "https://via.placeholder.com/120"},
-      {"url": "https://via.placeholder.com/120"},
-      {"url": "https://via.placeholder.com/120"}
+      "https://via.placeholder.com/320",
+      "https://via.placeholder.com/320",
+      "https://via.placeholder.com/320"
     ]
   },
   {
@@ -78,9 +78,9 @@
     "country": "Canada",
     "status": "busy",
     "images" : [
-      "https://via.placeholder.com/120",
-      "https://via.placeholder.com/120",
-      "https://via.placeholder.com/120"
+      "https://via.placeholder.com/420",
+      "https://via.placeholder.com/420",
+      "https://via.placeholder.com/420"
     ]
   },
   {

@@ -1,7 +1,19 @@
 page-location-detail {
-    #carousel{
+   
+
+    #favButton {
         position: absolute;
-        right: 50%;
-        left: 50%;
+        right: 10%;
     }
+
+    .toast {
+        background-color: "primary";
+        color: "primary";
+        text-align: center;
+    }
+
+    ion-slide{
+        display: block !important;
+        align-items: unset !important;
+      }
 }

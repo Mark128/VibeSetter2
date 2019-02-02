@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { LocationService } from '../../providers/location/location';
+import { LocationDetailPage } from '../location-detail/location-detail';
 
 @Component({
   selector: 'page-agm',
@@ -46,7 +47,7 @@ export class AgmPage {
   }
 
   markerClicked($event, location){
-    console.log(location.name);
+    this.navCtrl.push(LocationDetailPage, location);
   }
 
 }
