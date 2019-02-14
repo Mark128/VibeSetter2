@@ -1,47 +1,58 @@
 
 <ion-header>
-
   <ion-navbar color="primary">
     <ion-title>{{location.name}}</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content>
   <ion-card>
-    <ion-card-header>       
-      <div>  
-        <ion-card-title>
-          <button ion-button clear medium *ngIf="isFav" id="favButton" icon-only (click)="toggleFavourite(location)">
-            <ion-icon name="star" color="favourite"></ion-icon>
+    <ion-card-header>     
+      <ion-card-title>   
+        <div class="favIconOn">
+          <button ion-button clear *ngIf="isFav" icon-only (click)="toggleFavourite(location)">
+            <ion-icon name="star" style="zoom:2.0" color="favourite"></ion-icon>
           </button>
-          <button ion-button clear medium *ngIf="!isFav" id="favButton" icon-only (click)="toggleFavourite(location)">
-            Add to Favourites
-            <ion-icon name="star"></ion-icon>
-          </button>
-        </ion-card-title>            
-      </div>
+        </div>
+        <div class="favIconDiv" *ngIf="!isFav">
+          <button ion-button clear class="favIconOff" icon-only (click)="toggleFavourite(location)">
+            <ion-icon name="star" style="zoom:2.0"></ion-icon>
+          </button>          
+        </div>      
+        <div class="favIconDiv" *ngIf="!isFav">
+          <h4>add to favs</h4>
+        </div>     
+      </ion-card-title>                
     </ion-card-header>
+
     <ion-card-content>
       <ion-slides *ngIf="location?.images" pager="true" centeredSlides="true">
         <ion-slide *ngFor="let image of location.images">
           <img [src]=image alt="location.name" height="490" width="490">
         </ion-slide>
-      </ion-slides>
+      </ion-slides>     
     </ion-card-content>
-    <br>
-    <br>
+
+    <ion-card-content>
+      <div class="vibeIcon">              
+        <ion-icon name="beer" style="zoom:2.0;"></ion-icon>  
+        {{location?.status}}
+      </div>      
+    </ion-card-content>
+
     <ion-card-content>
       {{location?.description}}
     </ion-card-content>
     <ion-card-content>
-      {{location?.street}} <br>  
-      {{location?.city}}, {{location?.province}} <br>
+      {{location?.street}}, 
+      {{location?.city}}, {{location?.province}} 
       {{location?.postal}}         
     </ion-card-content>
-    <ion-card-content>
-      {{location?.status}}
-    </ion-card-content>
   </ion-card> 
+  
+  <ion-card>
+    <ion-card-content>
+      <h2>Reviews</h2>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
