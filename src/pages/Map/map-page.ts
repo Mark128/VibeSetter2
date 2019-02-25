@@ -10,8 +10,9 @@ import { LocationDetailPage } from '../location-detail/location-detail';
 })
 export class MapPage {
 
-  public myPosition: any = {};
   public locations:  any = []; 
+  public myPosition: any = {};
+  public nearbyLocations: any = [];
   public mapZoom = 14; 
  
   constructor(
@@ -23,24 +24,40 @@ export class MapPage {
   }
 
   ionViewDidLoad() {  
-    //When the app loads, get all the locations from the location service and then load the map
-    this.locationService.getLocations().subscribe((response) => {
-       this.locations = response;
-    }); 
-
+    //Get user's position 
     this.getMyPosition();
+
+    //then get all the locations from the location service and then load the map
+   
   }
 
   async getMyPosition(){
     await this.platform.ready();
     this.geolocation.getCurrentPosition().then((position) => {
+
       this.myPosition ={
         lat: position.coords.latitude,
         lng: position.coords.longitude,
-      }
+      };  
 
       this.locationService.currentUserLocation = this.myPosition;
-    });
+      this.getLocations();   
+    });   
+  }
+
+  getLocations() {
+   
+    //receive locations
+    this.locationService.getLocations().subscribe((response) => {
+
+      //set distance from user to each location
+      this.locations = this.locationService.applyHaversine(response);
+
+      //filter the locations for ones within search radius and place inside nearbyLocations array
+      this.nearbyLocations = this.locations.filter((loc)=>{        
+        return loc.distance < 20;
+      });
+    }); 
   }
 
   markerClicked(location){

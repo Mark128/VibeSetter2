@@ -9,7 +9,7 @@
 <ion-content>
     <agm-map [latitude]="myPosition.lat" [longitude]="myPosition.lng" [zoom]="mapZoom"> 
         <agm-marker [latitude]="myPosition.lat" [longitude]="myPosition.lng"></agm-marker>
-        <agm-marker *ngFor="let location of locations" 
+        <agm-marker *ngFor="let location of nearbyLocations" 
           [latitude]="location.lat" [longitude]="location.long" [label]="labelOptions">
             <agm-snazzy-info-window 
               [latitude]="location.lat" [longitude]="location.long" [maxWidth]="200" [closeWhenOthersOpen]="true">
