@@ -11,20 +11,18 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { MapPage } from '../pages/Map/map-page';
 import { HttpClientModule } from '@angular/common/http';
 import { LocationService } from '../providers/location/location';
-import { AgmPage } from '../pages/agm/agm';
 import { LocationListPage } from '../pages/location-list/location-list';
 import { LocationDetailPage } from '../pages/location-detail/location-detail';
 import { ProfilePage } from '../pages/profile/profile';
+import { MapPage } from '../pages/Map/map-page';
 
 @NgModule({
   declarations: [
     MyApp,
     MapPage,
     TabsPage,
-    AgmPage,
     LocationListPage,
     LocationDetailPage,
     ProfilePage
@@ -43,7 +41,6 @@ import { ProfilePage } from '../pages/profile/profile';
     MyApp,
     MapPage,
     TabsPage,
-    AgmPage,
     LocationListPage,
     LocationDetailPage,
     ProfilePage

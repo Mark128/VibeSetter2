@@ -1,11 +1,26 @@
+
 <ion-header>
+  <ion-navbar color="primary">
+    <ion-title>VibeSetter</ion-title>
+  </ion-navbar>
+</ion-header>
 
-   <ion-navbar color="primary">
-     <ion-title>VibeSetter</ion-title>
-   </ion-navbar>
- 
- </ion-header>
 
-<ion-content class="master">
-   <div #map id="map"></div> 
+<ion-content>
+    <agm-map [latitude]="myPosition.lat" [longitude]="myPosition.lng" [zoom]="mapZoom"> 
+        <agm-marker [latitude]="myPosition.lat" [longitude]="myPosition.lng"></agm-marker>
+        <agm-marker *ngFor="let location of locations" 
+          [latitude]="location.lat" [longitude]="location.long" [label]="labelOptions">
+            <agm-snazzy-info-window 
+              [latitude]="location.lat" [longitude]="location.long" [maxWidth]="200" [closeWhenOthersOpen]="true">
+                <ng-template>
+                  <div>
+                    <h2 id="markerTitle">{{location.name}}</h2>
+                    <img id="locationImage" src="https://via.placeholder.com/100"/>        
+                  </div>          
+                  <button (click)="markerClicked($event, location)">Click Me</button>
+                </ng-template>
+              </agm-snazzy-info-window> 
+        </agm-marker>
+      </agm-map>
 </ion-content>

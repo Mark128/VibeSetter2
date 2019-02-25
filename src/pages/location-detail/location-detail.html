@@ -5,23 +5,32 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
   <ion-card>
     <ion-card-header>     
-      <ion-card-title>   
+      <ion-card-title> 
+        <ion-grid> 
+        <ion-row class="topContent">
+        <ion-col col-1>
+        <div class="vibeIcon">              
+          <ion-icon name="beer" style="zoom:1.5;"></ion-icon>  
+            {{location?.status}}
+        </div>      
+       </ion-col>
+       <ion-col col-11>
         <div class="favIconOn">
           <button ion-button clear *ngIf="isFav" icon-only (click)="toggleFavourite(location)">
             <ion-icon name="star" style="zoom:2.0" color="favourite"></ion-icon>
           </button>
         </div>
-        <div class="favIconDiv" *ngIf="!isFav">
+        <div class="favIconOff" *ngIf="!isFav">
           <button ion-button clear class="favIconOff" icon-only (click)="toggleFavourite(location)">
             <ion-icon name="star" style="zoom:2.0"></ion-icon>
-          </button>          
-        </div>      
-        <div class="favIconDiv" *ngIf="!isFav">
-          <h4>add to favs</h4>
-        </div>     
+          </button>         
+        </div> 
+      </ion-col>      
+      </ion-row>
+      </ion-grid> 
       </ion-card-title>                
     </ion-card-header>
 
@@ -34,10 +43,7 @@
     </ion-card-content>
 
     <ion-card-content>
-      <div class="vibeIcon">              
-        <ion-icon name="beer" style="zoom:2.0;"></ion-icon>  
-        {{location?.status}}
-      </div>      
+       
     </ion-card-content>
 
     <ion-card-content>
@@ -46,7 +52,11 @@
     <ion-card-content>
       {{location?.street}}, 
       {{location?.city}}, {{location?.province}} 
-      {{location?.postal}}         
+      {{location?.postal}}  
+      <div>
+          <ion-icon name="pin"></ion-icon>
+          {{location?.distance}}KM
+        </div>       
     </ion-card-content>
   </ion-card> 
   

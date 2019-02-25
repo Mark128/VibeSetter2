@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { LocationService } from '../../providers/location/location';
 import { LocationDetailPage } from '../location-detail/location-detail';
+import * as _ from 'lodash';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { LocationDetailPage } from '../location-detail/location-detail';
 export class LocationListPage {
 
   public locations: any  = [];
+  public searchTerm: string = '';
 
   constructor(
     public navCtrl: NavController, 
@@ -24,9 +26,13 @@ export class LocationListPage {
        content: 'Getting Bars',
        dismissOnPageChange: true
      });
+
      loader.present();
      this.locationService.getLocations().subscribe((response) => {
-      this.locations = response;
+      this.locations = this.locationService.applyHaversine(response);
+      this.locations.sort((locationA, locationB) => {
+        return locationA.distance - locationB.distance;
+      });      
    }); 
   }
 

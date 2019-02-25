@@ -9,6 +9,7 @@
     "postal": "M5E 1X6",
     "country": "Canada",
     "status": "busy",
+    "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
       "https://via.placeholder.com/320",
@@ -26,6 +27,7 @@
     "postal": "M5E 1N3",
     "country": "Canada",    
     "status": "packed",
+    "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
       "https://via.placeholder.com/320",
@@ -43,6 +45,7 @@
     "postal": "M5E 1T3",
     "country": "Canada",
     "status": "dead",
+    "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
       "https://via.placeholder.com/320",
@@ -60,6 +63,7 @@
     "postal": "M5E 1B5",
     "country": "Canada",
     "status": "busy",
+    "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
       "https://via.placeholder.com/320",
@@ -77,6 +81,7 @@
     "postal": "M5H 3T9",
     "country": "Canada",
     "status": "busy",
+    "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
       "https://via.placeholder.com/320",
@@ -94,6 +99,7 @@
     "postal": "M5V 1M3",
     "country": "Canada",
     "status": "packed",
+    "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
       "https://via.placeholder.com/320",
@@ -111,6 +117,7 @@
     "postal": "M5H 1W7",
     "country": "Canada",
     "status": "dead",
+    "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
       "https://via.placeholder.com/320",

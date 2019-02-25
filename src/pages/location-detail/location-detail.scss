@@ -2,15 +2,20 @@ page-location-detail {
    
 
    .vibeIcon {
-    text-align: center;
+    text-align: left;
    }
 
    .favIconOn {
-    text-align: center;
+    text-align: right;
    }
 
-  .favIconDiv{
-    text-align: center;
+  .favIconOff{
+    text-align: right;
+  }
+
+  .topContent{
+    margin-top: 1px;
+    margin-bottom: 10px;
   }
 
     .toast {

@@ -1,18 +1,18 @@
-.title{text-align: center;}
-.master{background-color: #f5613c;}
-.ios, .md {
- 
-    map-page {
- 
-      .scroll {
-        height: 100%
-      }
- 
-      #map {
-        width: 100%;
+map-page {
+    agm-map{
         height: 100%;
-      }
- 
+        width: 100%;
     }
- 
+
+    #locationImage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    #markerTitle{
+        max-width: 100;
+    }
+
 }
