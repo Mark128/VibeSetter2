@@ -24,14 +24,11 @@ export class MapPage {
   }
 
   ionViewDidLoad() {  
-    //Get user's position 
-    this.getMyPosition();
-
-    //then get all the locations from the location service and then load the map
-   
+    //Get user's position as well as other location data
+    this.getPositions();   
   }
 
-  async getMyPosition(){
+  async getPositions(){
     await this.platform.ready();
     this.geolocation.getCurrentPosition().then((position) => {
 
@@ -45,8 +42,7 @@ export class MapPage {
     });   
   }
 
-  getLocations() {
-   
+  getLocations() {   
     //receive locations
     this.locationService.getLocations().subscribe((response) => {
 
@@ -63,5 +59,4 @@ export class MapPage {
   markerClicked(location){
     this.navCtrl.push(LocationDetailPage, location);
   }
-
 }

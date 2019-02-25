@@ -12,13 +12,29 @@
         <agm-marker *ngFor="let location of nearbyLocations" 
           [latitude]="location.lat" [longitude]="location.long" [label]="labelOptions">
             <agm-snazzy-info-window 
-              [latitude]="location.lat" [longitude]="location.long" [maxWidth]="200" [closeWhenOthersOpen]="true">
+              [latitude]="location.lat" [longitude]="location.long" [maxWidth]="400" [closeWhenOthersOpen]="true">
                 <ng-template>
                   <div>
-                    <h2 id="markerTitle">{{location.name}}</h2>
-                    <img id="locationImage" src="https://via.placeholder.com/100"/>        
-                  </div>          
-                  <button (click)="markerClicked($event, location)">Click Me</button>
+                    <ion-title id="markerTitle">{{location.name}}</ion-title>
+                    <div>
+                      <img id="locationImage" src="https://via.placeholder.com/200"/>      
+                    </div>
+                    <ion-label text-wrap>
+                        <span>{{location.description}}</span><br>
+                     </ion-label>
+                     <ion-label>
+                       <span>
+                         {{location?.street}}, {{location?.city}}, {{location?.province}}{{location?.postal}}         
+                       </span>
+                     </ion-label>
+                     <div>
+                       <ion-icon name="pin"></ion-icon>
+                       {{location?.distance}}KM
+                     </div>  
+                  </div> 
+                  <div>         
+                    <button id="detailButton" (click)="markerClicked(location)">More Details</button>
+                  </div>
                 </ng-template>
               </agm-snazzy-info-window> 
         </agm-marker>

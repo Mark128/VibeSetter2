@@ -11,9 +11,10 @@
     <ion-searchbar placeholder="Filter Bars" [(ngModel)]="searchTerm" (ionInput)="setFilterLocations($event)"></ion-searchbar> 
   </ion-toolbar>
   <ion-list>
-    <ion-item *ngFor="let location of locations" (click)="goToDetailPage(location)">
-      <ion-label>
-       <div>{{location.name}}</div>
+    <ion-card *ngFor="let location of locations" (click)="goToDetailPage(location)">
+      <ion-title>
+        {{location.name}}
+      </ion-title>
        <div>
         <ion-grid>
           <ion-row>
@@ -28,20 +29,21 @@
           </ion-row>
         </ion-grid>
       </div>
-      <div> 
-         <span>{{location.description}}</span><br>
-         <span>
-           {{location?.street}}, {{location?.city}}, {{location?.province}}{{location?.postal}}         
-          </span>
-          <div>
-            <ion-icon name="pin"></ion-icon>
-            {{location?.distance}}KM
-          </div>
-      </div>  
 
-       
-      </ion-label>
-    
-    </ion-item>
+      <div id="description"> 
+        <ion-label text-wrap>
+           <span>{{location.description}}</span><br>
+        </ion-label>
+        <ion-label>
+          <span>
+            {{location?.street}}, {{location?.city}}, {{location?.province}}{{location?.postal}}         
+          </span>
+        </ion-label>
+        <div>
+          <ion-icon name="pin"></ion-icon>
+          {{location?.distance}}KM
+        </div>
+      </div>           
+    </ion-card>
   </ion-list>
 </ion-content>

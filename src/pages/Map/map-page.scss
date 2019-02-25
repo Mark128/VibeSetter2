@@ -12,7 +12,25 @@ map-page {
     }
 
     #markerTitle{
-        max-width: 100;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    #detailButton{
+        background-color: #f5613c; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
+    
     }
 
 }

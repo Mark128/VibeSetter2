@@ -29,7 +29,9 @@ export class LocationListPage {
 
      loader.present();
      this.locationService.getLocations().subscribe((response) => {
+       
       this.locations = this.locationService.applyHaversine(response);
+
       this.locations.sort((locationA, locationB) => {
         return locationA.distance - locationB.distance;
       });      
