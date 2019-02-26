@@ -19,7 +19,6 @@ export class LocationDetailPage {
 
   ionViewDidLoad() {
     this.location = this.navParams.data;
-    console.log(this.location.images.length)
   }
 
   toggleFavourite(location){
@@ -35,5 +34,4 @@ export class LocationDetailPage {
     }
     this.isFav = !this.isFav;
   }
-
 }

@@ -53,10 +53,24 @@ export class MapPage {
       this.nearbyLocations = this.locations.filter((loc)=>{        
         return loc.distance < 20;
       });
+
+      this.nearbyLocations.forEach(location => {
+        if(location.status === 'busy'){
+          location.icon = "./assets/imgs/bar_busy.png";
+        } else if(location.status === 'buzzing'){
+          location.icon = "./assets/imgs/bar_buzzing.png";
+        } else if(location.status === 'packed'){
+          location.icon = "./assets/imgs/bar_packed.png";
+        } else {
+          location.icon = "./assets/imgs/bar_dead.png";
+        }
+      });
     }); 
   }
 
   markerClicked(location){
     this.navCtrl.push(LocationDetailPage, location);
   }
+
+  
 }

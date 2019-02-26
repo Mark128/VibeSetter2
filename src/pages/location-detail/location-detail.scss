@@ -18,14 +18,33 @@ page-location-detail {
     margin-bottom: 10px;
   }
 
-    .toast {
-        background-color: "primary";
-        color: "primary";
-        text-align: center;
-    }
+  .toast {
+    background-color: "primary";
+    color: "primary";
+    text-align: center;
+  }
 
-    ion-slide{
-        display: block !important;
-        align-items: unset !important;
-      }
+  #fab {
+    position: absolute; 
+    bottom: 60px; 
+    right: 10px; 
+  }
+
+
+  .actions {
+    top: 50%;
+    left: 50%;
+    display: inline;
+    zoom:2.0;
+  }
+
+  #title{
+    text-align: center;
+  }
+  
+
+  ion-slide{
+    display: block !important;
+     align-items: unset !important;
+  }
 }

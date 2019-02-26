@@ -1,7 +1,7 @@
 
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>{{location.name}}</ion-title>
+    <ion-title id="title">{{location.name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -16,19 +16,7 @@
           <ion-icon name="beer" style="zoom:1.5;"></ion-icon>  
             {{location?.status}}
         </div>      
-       </ion-col>
-       <ion-col col-11>
-        <div class="favIconOn">
-          <button ion-button clear *ngIf="isFav" icon-only (click)="toggleFavourite(location)">
-            <ion-icon name="star" style="zoom:2.0" color="favourite"></ion-icon>
-          </button>
-        </div>
-        <div class="favIconOff" *ngIf="!isFav">
-          <button ion-button clear class="favIconOff" icon-only (click)="toggleFavourite(location)">
-            <ion-icon name="star" style="zoom:2.0"></ion-icon>
-          </button>         
-        </div> 
-      </ion-col>      
+       </ion-col>     
       </ion-row>
       </ion-grid> 
       </ion-card-title>                
@@ -62,7 +50,32 @@
   
   <ion-card>
     <ion-card-content>
-      <h2>Reviews</h2>
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+              
+                
+              <ion-icon name="star" class="actions"></ion-icon>
+                
+              </ion-col>
+              <ion-col>
+                <ion-icon name="navigate" class="actions"></ion-icon>
+              </ion-col>
+              <ion-col>
+                <ion-icon name="share" class="actions"></ion-icon>
+              </ion-col>
+              <ion-col>
+                <ion-icon name="alert" class="actions"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
     </ion-card-content>
   </ion-card>
 </ion-content>
+
+<!--<ion-fab right bottom id="fab">
+  <button ion-fab>
+    <ion-icon name="cog"></ion-icon>
+  </button>
+</ion-fab>
+-->

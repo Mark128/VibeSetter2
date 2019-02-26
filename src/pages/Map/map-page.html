@@ -1,7 +1,7 @@
 
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>VibeSetter</ion-title>
+    <ion-title id="title">VibeSetter</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -10,7 +10,7 @@
     <agm-map [latitude]="myPosition.lat" [longitude]="myPosition.lng" [zoom]="mapZoom"> 
         <agm-marker [latitude]="myPosition.lat" [longitude]="myPosition.lng"></agm-marker>
         <agm-marker *ngFor="let location of nearbyLocations" 
-          [latitude]="location.lat" [longitude]="location.long" [label]="labelOptions">
+          [latitude]="location.lat" [longitude]="location.long" [label]="labelOptions" [iconUrl]="location.icon">
             <agm-snazzy-info-window 
               [latitude]="location.lat" [longitude]="location.long" [maxWidth]="400" [closeWhenOthersOpen]="true">
                 <ng-template>
@@ -40,3 +40,5 @@
         </agm-marker>
       </agm-map>
 </ion-content>
+
+

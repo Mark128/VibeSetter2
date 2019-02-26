@@ -9,6 +9,7 @@
     "postal": "M5E 1X6",
     "country": "Canada",
     "status": "busy",
+    "icon": "./assets/imgs/bar_dead.png",
     "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
@@ -27,6 +28,7 @@
     "postal": "M5E 1N3",
     "country": "Canada",    
     "status": "packed",
+    "icon": "./assets/imgs/bar_dead.png",
     "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
@@ -45,6 +47,7 @@
     "postal": "M5E 1T3",
     "country": "Canada",
     "status": "dead",
+    "icon": "./assets/imgs/bar_dead.png",
     "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
@@ -63,6 +66,7 @@
     "postal": "M5E 1B5",
     "country": "Canada",
     "status": "busy",
+    "icon": "./assets/imgs/bar_dead.png",
     "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
@@ -81,6 +85,7 @@
     "postal": "M5H 3T9",
     "country": "Canada",
     "status": "busy",
+    "icon": "./assets/imgs/bar_dead.png",
     "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
@@ -99,6 +104,7 @@
     "postal": "M5V 1M3",
     "country": "Canada",
     "status": "packed",
+    "icon": "./assets/imgs/bar_dead.png",
     "distance": 0,
     "images" : [
       "https://via.placeholder.com/320",
@@ -118,6 +124,7 @@
     "country": "Canada",
     "status": "dead",
     "distance": 0,
+    "icon": "./assets/imgs/bar_dead.png",
     "images" : [
       "https://via.placeholder.com/320",
       "https://via.placeholder.com/320",
